@@ -1,0 +1,30 @@
+<%= form_for @project do |f| %>
+
+<p>
+  <%= f.label :planName, "プロジェクト名"%><br>
+  <%= f.text_field :planName %>
+  <% if @project.errors.any? %>
+  <%= @project.errors.messages[:planName][0] %>
+  <% end %>
+</p>
+
+<p>
+  <%= f.label :description, "内容" %><br>
+  <%= f.text_area :description %>
+</p>
+
+<p>
+  <%= f.label :wantPersons, "募集人数" %><br>
+  <%= f.number_field :wantPersons %>
+</p>
+
+<p>
+  <%= f.label :projectStatus, "進捗状況" %><br>
+  <%= f.text_field :projectStatus %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>

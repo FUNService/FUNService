@@ -1,0 +1,15 @@
+<h1><%= @project.planName %></h1>
+<table>
+  <tr>
+    <th>内容</th>
+    <td><%= @project.description %></td>
+  </tr>
+  <tr>
+    <th>募集人数</th>
+    <td><%= @project.wantPersons %>人</td>
+  </tr>
+  <tr>
+    <th>進捗状況</th>
+    <td><%= @project.projectStatus %></td>
+  </tr>
+</table>
