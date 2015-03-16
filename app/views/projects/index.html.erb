@@ -1,4 +1,8 @@
+
+
 <h1>Project</h1>
+
+
 
 <table>
   <tr>
@@ -7,8 +11,8 @@
     <th></th>
   </tr>
 
-  <% @projects.each do |project| %>
 
+  <% @projects.each do |project| %>
   <tr>
     <td><%= link_to project.planName, project_path(project.id) %></td>
     <td><%= link_to "[編集]", edit_project_path(project.id) %></td>
