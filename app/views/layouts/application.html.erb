@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<div class="container">
 <%= image_tag "logo.png" %>
   <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
@@ -24,12 +25,13 @@
     <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
     <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
+</div>
 
 <div class="container">
 <%= yield %>
-</div>
 
 <%= link_to "Home", projects_path %>
+ </div>
 
 </body>
 </html>
