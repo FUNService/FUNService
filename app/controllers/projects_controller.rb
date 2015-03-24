@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!,:set_project, only: [:show, :edit, :update, :destroy]
 
   def index
     @projects = Project.all
@@ -16,6 +16,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if
+      @project.inventer_id = current_user.id
       @project.save
       redirect_to projects_path
     else

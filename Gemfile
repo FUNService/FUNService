@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+#
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
@@ -37,7 +37,11 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'devise'
+
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
+gem 'devise' #ユーザ認証に使ってる奴
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git' #cssとして使ってる奴
+gem 'better_errors'#error画面をめっちゃ便利にする奴
+gem "binding_of_caller"#better_errosと一緒に使うと便利な奴

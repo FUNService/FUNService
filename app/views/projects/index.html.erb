@@ -4,9 +4,11 @@
 
 
 
-<table>
+<table class="table">
   <tr>
-    <th>タイトル</th>
+    <th>募集中の企画</th>
+    <th>募集人数</th>
+    <th>主催者ID</th>
     <th></th>
     <th></th>
   </tr>
@@ -15,6 +17,8 @@
   <% @projects.each do |project| %>
   <tr>
     <td><%= link_to project.planName, project_path(project.id) %></td>
+    <td><%= project.wantPersons %></td>
+    <td><%= project.inventer_id %></td>
     <td><%= link_to "[編集]", edit_project_path(project.id) %></td>
     <td><%= link_to "[削除]", project_path(project.id), method: :delete, data: { confirm: "えっ、消すけどいいの？" }%></td>
   </tr>
